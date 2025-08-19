@@ -105,3 +105,21 @@ const form = document.getElementById("form");
 //   alert("");
 // });
 // }
+
+
+let input = document.getElementById("name");
+let btn = document.getElementById("btnName");
+btn.addEventListener("click", () => {
+  if (input.value.trim() !== "") {
+    let names = JSON.parse(localStorage.getItem("usernames")) || [];
+    names.push(input.value);
+    localStorage.setItem("usernames", JSON.stringify(names));
+    alert("username is " + input.value);
+  }
+});
+if (localStorage.usernames) {
+  let names = JSON.parse(localStorage.usernames);
+  alert("Usernames found: " + names.join(", "));
+} else {
+  alert("There is no username");
+}
