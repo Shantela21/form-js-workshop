@@ -4,7 +4,36 @@ padding : 0;
 box-sizing: border-box;
 }
 
-html,body, #root{
+html,body{
     width: 100%;
     height: 100%;
+}
+/* 
+span{
+    background-color: rgb(238, 133, 133);
+    color: rgb(216, 3, 3);
+} */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+}
+
+main{
+    width: 50%;
+    height: max-content;
+   
+}
+
+#form{
+    display: none;
+
+}
+
+#fillForm{
+    display: none;
+
 }
